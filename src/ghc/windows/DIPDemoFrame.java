@@ -8,7 +8,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class DIPDemoFrame extends JFrame{
-
+	
 	private static final long serialVersionUID = 1L;
 	
 	public DIPDemoFrame() {
@@ -26,7 +26,7 @@ public class DIPDemoFrame extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				new FileDownloadDlg(DIPDemoFrame.this).setVisible(true);
+				//new FileDownloadDlg(DIPDemoFrame.this).setVisible(true);
 			}
 		});
 		container.add(btn);
