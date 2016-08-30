@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
+import ghc.database.MySqlOpt;
+
 public class DIPDemoFrame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
@@ -27,6 +29,13 @@ public class DIPDemoFrame extends JFrame{
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
 				//new FileDownloadDlg(DIPDemoFrame.this).setVisible(true);
+				
+				//DIPOpenCV.write(".\\imgout\\", "ret.png", DIPOpenCV.read("face.jpg"));
+				
+				MySqlOpt mysqlOpt = new MySqlOpt();
+				mysqlOpt.connectDB();
+				mysqlOpt.createTable();
+	
 			}
 		});
 		container.add(btn);
