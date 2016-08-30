@@ -1,6 +1,7 @@
 package ghc.dip.opencv;
 
 import ghc.dip.java.DIPJava;
+import ghc.files.FileOpt;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
@@ -46,8 +47,11 @@ public class DIPOpenCV extends DIPJava{
 		return Highgui.imread(pathImg);
 	}
 	
-	public static void write(String pathImg,Mat mat){
-		Highgui.imwrite(pathImg, mat);
+	public static void write(String dirImg,String filenameImg,Mat mat){
+			
+		FileOpt.directoryCheckAndMake(dirImg);
+		
+		Highgui.imwrite(dirImg+"\\"+filenameImg, mat);
 	}
 	
 	public static Mat RGB2Gray(Mat mat){

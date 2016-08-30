@@ -1,5 +1,6 @@
 package ghc.files;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -31,6 +32,13 @@ public class FileOpt {
          }catch(Exception e){
             System.out.println("FileDownloadException: " + e.getMessage());
          }
+	}
+	
+	public static void directoryCheckAndMake(String strDir){
+		File dir = new File(strDir);
+		if (!dir.exists() && !dir.isDirectory()) {
+			dir.mkdir();
+		}
 	}
 
 }
