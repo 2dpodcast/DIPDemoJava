@@ -9,11 +9,17 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * Eclipse ==> eclipse-java-mars-R-win32
 * EGit ==> http://download.eclipse.org/egit/updates/
 * OpenCV ==> OpenCV 2.4.9 for Windows
+* MySQL Connector/J ( the official JDBC driver for MySQL ) ==> mysql-connector-java-5.1.39
 
 ## Tutorials
 * Using OpenCV Java with Eclipse: [http://docs.opencv.org/2.4/doc/tutorials/introduction/java_eclipse/java_eclipse.html#java-eclipse](http://docs.opencv.org/2.4/doc/tutorials/introduction/java_eclipse/java_eclipse.html#java-eclipse "Using OpenCV Java with Eclipse")
 * OpenCV Java Tutorials documentation: [http://opencv-java-tutorials.readthedocs.io/en/latest/](http://opencv-java-tutorials.readthedocs.io/en/latest/ "OpenCV Java Tutorials documentation")
 * Java Digital Image Processing Tutorial: [http://www.tutorialspoint.com/java_dip/](http://www.tutorialspoint.com/java_dip/ "Java Digital Image Processing Tutorial")
+
+## MySQL Programming with Java
+* MySQL Connector/J: [http://dev.mysql.com/downloads/connector/j/](http://dev.mysql.com/downloads/connector/j/)
+* JDBC Tutorial: [http://www.tutorialspoint.com/jdbc/index.htm](http://www.tutorialspoint.com/jdbc/index.htm)
+* MySQL Java tutorial: [http://zetcode.com/db/mysqljava/](http://zetcode.com/db/mysqljava/)
 
 ## Eclipse
 ### Shortcuts
