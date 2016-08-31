@@ -21,6 +21,24 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * JDBC Tutorial: [http://www.tutorialspoint.com/jdbc/index.htm](http://www.tutorialspoint.com/jdbc/index.htm)
 * MySQL Java tutorial: [http://zetcode.com/db/mysqljava/](http://zetcode.com/db/mysqljava/)
 
+## Events Processing
+* Key Bindings: [http://docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html](http://docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html "How to Use Key Bindings")
+
+### Issues
+Close frame by pressing the escape key:
+
+    //once ESC is pressed to quit the program
+    AbstractAction actionExit = new AbstractAction(){ 
+    	private static final long serialVersionUID = 1L;
+    	public void actionPerformed(ActionEvent e){
+    		dispose();
+    		//System.exit(0);
+    	}
+    };
+    getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(
+    		KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "EXIT");
+    getRootPane().getActionMap().put("EXIT", actionExit);
+
 ## Eclipse
 ### Shortcuts
 * Shift + Alt + S: Override/Implement Method...
