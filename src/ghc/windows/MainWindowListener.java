@@ -3,7 +3,7 @@ package ghc.windows;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class DIPDemoWindowListener implements WindowListener{
+public class MainWindowListener implements WindowListener{
 	
 	@Override
 	public void windowActivated(WindowEvent e) {

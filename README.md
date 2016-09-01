@@ -16,6 +16,11 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * OpenCV Java Tutorials documentation: [http://opencv-java-tutorials.readthedocs.io/en/latest/](http://opencv-java-tutorials.readthedocs.io/en/latest/ "OpenCV Java Tutorials documentation")
 * Java Digital Image Processing Tutorial: [http://www.tutorialspoint.com/java_dip/](http://www.tutorialspoint.com/java_dip/ "Java Digital Image Processing Tutorial")
 
+## GUI Programming
+[https://www.ntu.edu.sg/home/ehchua/programming/java/J4a_GUI.html](https://www.ntu.edu.sg/home/ehchua/programming/java/J4a_GUI.html "Java Programming Tutorial ---- Programming Graphical User Interface (GUI)")
+
+* JStatusBar: [http://java-articles.info/articles/?p=65](http://java-articles.info/articles/?p=65)
+
 ## MySQL Programming with Java
 * MySQL Connector/J: [http://dev.mysql.com/downloads/connector/j/](http://dev.mysql.com/downloads/connector/j/)
 * JDBC Tutorial: [http://www.tutorialspoint.com/jdbc/index.htm](http://www.tutorialspoint.com/jdbc/index.htm)
