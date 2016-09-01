@@ -39,6 +39,7 @@ Close frame by pressing the escape key:
     		KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), "EXIT");
     getRootPane().getActionMap().put("EXIT", actionExit);
 
+## Multi-Threading
 ## Eclipse
 ### Shortcuts
 * Shift + Alt + S: Override/Implement Method...

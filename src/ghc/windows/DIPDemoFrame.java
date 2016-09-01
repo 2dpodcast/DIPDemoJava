@@ -1,5 +1,6 @@
 package ghc.windows;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,12 +11,16 @@ import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JProgressBar;
 import javax.swing.KeyStroke;
+
+import ghc.threads.MyThread;
 
 public class DIPDemoFrame extends JFrame{	
 	private static final long serialVersionUID = 1L;
 	
-	private JButton btn;
+	private JButton btn;	
+	private JProgressBar progressBar;
 	
 	public DIPDemoFrame() {
 		// TODO Auto-generated constructor stub			
@@ -24,16 +29,23 @@ public class DIPDemoFrame extends JFrame{
         setSize(800, 600);
         
 		Container container = getContentPane();
-		container.setLayout(null);
+		//container.setLayout(null);
 		
 		btn = new JButton("µ¯³ö");
 		btn.setBounds(10, 10, 100, 50);
 		
-		container.add(btn);		
+		progressBar= new JProgressBar();
+		progressBar.setStringPainted(true);
+		
+		//container.add(btn);	
+		container.add(progressBar, BorderLayout.SOUTH);
+		
 		setVisible(true);
 		
 		addDIPDemoFrameEvents();
 		addJButtonsEvents();
+		
+		processThreads();       
 	}
 
 	public static void main(String[] args) {
@@ -41,13 +53,25 @@ public class DIPDemoFrame extends JFrame{
         new DIPDemoFrame();
 	}
 	
+	public void processThreads() {      
+        MyThread mythread = new MyThread();
+        mythread.setProgressBarThread(progressBar);
+        Thread t1 = new Thread(mythread);
+        Thread t2 = new Thread(mythread);
+        Thread t3 = new Thread(mythread);
+        Thread t4 = new Thread(mythread);
+        t1.start();
+        t2.start();
+        t3.start();
+        t4.start();
+	}
+	
 	private void addJButtonsEvents(){
 		btn.addActionListener(new ActionListener() {		
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				new FileDownloadDlg(DIPDemoFrame.this).setVisible(true);
-				
+				new FileDownloadDlg(DIPDemoFrame.this).setVisible(true);				
 				//DIPOpenCV.write(".\\imgout\\", "ret.png", DIPOpenCV.read("face.jpg"));
 			}
 		});
