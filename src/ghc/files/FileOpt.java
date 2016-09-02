@@ -1,10 +1,14 @@
 package ghc.files;
 
+import java.awt.Component;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
+
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileOpt {
 
@@ -39,6 +43,20 @@ public class FileOpt {
 		if (!dir.exists() && !dir.isDirectory()) {
 			dir.mkdir();
 		}
+	}
+	
+	public static String chooseFile(Component parent){
+		JFileChooser fileChooser = new JFileChooser();
+		FileNameExtensionFilter filter = 
+				new FileNameExtensionFilter("Í¼ÏñÎÄ¼þ(JPG/PNG/BMP)", "jpg","png","bmp");
+		fileChooser.setFileFilter(filter);
+		int ret = fileChooser.showOpenDialog(parent);
+		String filepath = "";
+		if (ret == JFileChooser.APPROVE_OPTION) {
+			File selectedFile = fileChooser.getSelectedFile();
+			filepath = selectedFile.getPath();
+		}
+		return filepath;
 	}
 
 }

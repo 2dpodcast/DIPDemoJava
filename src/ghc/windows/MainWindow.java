@@ -3,6 +3,7 @@ package ghc.windows;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.InputEvent;
@@ -19,13 +20,25 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.KeyStroke;
 
+import org.opencv.core.Mat;
+
+import ghc.dip.java.CanvasPanel;
+import ghc.dip.java.DIPJava;
+import ghc.dip.opencv.DIPOpenCV;
+import ghc.files.FileOpt;
 import ghc.threads.MyThread;
 import ghc.threads.TimerThread;
 
 public class MainWindow extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
+	private String pathImgSrc;
+	private Image imgSrc;
+	private Image imgDst;
+	
 	private TimerThread timerThread;
+	private CanvasPanel panelL;
+	private CanvasPanel panelR;	
 	
 	public MainWindow() {
 		// TODO Auto-generated constructor stub			
@@ -63,15 +76,39 @@ public class MainWindow extends JFrame {
 		menuitemCloseApp.setAccelerator(KeyStroke.getKeyStroke(
 				KeyEvent.VK_E,InputEvent.CTRL_MASK|InputEvent.SHIFT_MASK));
 		
+		JMenu menuDIP = new JMenu("图像处理");
+		JMenuItem menuitemGrayImg = new JMenuItem("图像灰度化");
+		
 		menuBar.add(menuFile);
 		menuFile.add(menuitemOpen);
 		menuFile.addSeparator();
 		menuFile.add(menuitemCloseApp);
+		menuBar.add(menuDIP);
+		menuDIP.add(menuitemGrayImg);
 		
 		menuitemOpen.addActionListener(new ActionListener() {			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
+				pathImgSrc = FileOpt.chooseFile(getContentPane());
+				imgSrc = DIPJava.readImage(pathImgSrc);
+				panelL.drawImage(imgSrc);
+			}
+		});
+		
+		menuitemGrayImg.addActionListener(new ActionListener() {		
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if(imgSrc == null){
+					return ;
+				}
+				Mat matSrc = DIPOpenCV.read(pathImgSrc);
+				
+				Mat mat = DIPOpenCV.RGB2Gray(matSrc);
+				
+				imgDst = DIPOpenCV.Mat2BufferedImage(mat);
+				panelR.drawImage(imgDst);
 			}
 		});
 		
@@ -79,12 +116,12 @@ public class MainWindow extends JFrame {
 	}
 	
 	private JPanel createMainPanel(){
-		JPanel panelL = new JPanel();
-		panelL.setBackground(Color.DARK_GRAY);
-		JPanel panelR = new JPanel();
-		panelR.setBackground(Color.GRAY);
+		panelL = new CanvasPanel();
+		panelL.setBackground(Color.WHITE);
+		panelR = new CanvasPanel();
+		panelR.setBackground(Color.WHITE);
 		
-		JPanel panelMain = new JPanel(new GridLayout(1, 2));
+		JPanel panelMain = new JPanel(new GridLayout(1, 2,5,5));
 		panelMain.add(panelL);
 		panelMain.add(panelR);
 		

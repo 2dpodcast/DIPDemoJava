@@ -21,7 +21,14 @@ public class DIPOpenCV extends DIPJava{
 	
 	public static Mat BufferedImage2Mat(BufferedImage image){	
 		byte[] data = ((DataBufferByte) image.getRaster().getDataBuffer()).getData();
-        Mat mat = new Mat(image.getHeight(), image.getWidth(), CvType.CV_8UC3);
+		
+		Mat mat = null;
+		if(image.getType() == BufferedImage.TYPE_BYTE_GRAY){
+			mat = new Mat(image.getHeight(), image.getWidth(), CvType.CV_8UC1);
+		}
+		if(image.getType() == BufferedImage.TYPE_3BYTE_BGR){
+			mat = new Mat(image.getHeight(), image.getWidth(), CvType.CV_8UC3);
+		}      
         mat.put(0, 0, data);
             
         return mat;
