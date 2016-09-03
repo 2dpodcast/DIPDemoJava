@@ -60,3 +60,6 @@ Close frame by pressing the escape key:
 ## Package to Jar file
 * 把Java程序打包成jar文件包并执行: [http://www.cnblogs.com/mq0036/p/3885407.html](http://www.cnblogs.com/mq0036/p/3885407.html)
 * MANIFEST.MF
+
+## 《Java从入门到精通》（明日科技）
+![《Java从入门到精通》京东产品特色](http://i.imgur.com/5QTa0Xh.jpg)
