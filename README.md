@@ -11,6 +11,14 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * OpenCV ==> OpenCV 2.4.9 for Windows
 * MySQL Connector/J ( the official JDBC driver for MySQL ) ==> mysql-connector-java-5.1.39
 
+## Eclipse
+### Shortcuts
+* Shift + Alt + S: Override/Implement Method...
+* Shift + Alt + R: Rename files
+
+### Intellisense
+[http://blog.csdn.net/ysydao/article/details/38731069](http://blog.csdn.net/ysydao/article/details/38731069 "eclipse智能提示及快捷键")
+
 ## Image Processing
 ### OpenCV
 * Using OpenCV Java with Eclipse: [http://docs.opencv.org/2.4/doc/tutorials/introduction/java_eclipse/java_eclipse.html#java-eclipse](http://docs.opencv.org/2.4/doc/tutorials/introduction/java_eclipse/java_eclipse.html#java-eclipse "Using OpenCV Java with Eclipse")
@@ -48,10 +56,7 @@ Close frame by pressing the escape key:
     getRootPane().getActionMap().put("EXIT", actionExit);
 
 ## Multi-Threading
-## Eclipse
-### Shortcuts
-* Shift + Alt + S: Override/Implement Method...
-* Shift + Alt + R: Rename files
 
-### Intellisense
-[http://blog.csdn.net/ysydao/article/details/38731069](http://blog.csdn.net/ysydao/article/details/38731069 "eclipse智能提示及快捷键")
+## Package to Jar file
+* 把Java程序打包成jar文件包并执行: [http://www.cnblogs.com/mq0036/p/3885407.html](http://www.cnblogs.com/mq0036/p/3885407.html)
+* MANIFEST.MF
