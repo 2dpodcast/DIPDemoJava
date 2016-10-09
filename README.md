@@ -37,6 +37,10 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * JDBC Tutorial: [http://www.tutorialspoint.com/jdbc/index.htm](http://www.tutorialspoint.com/jdbc/index.htm)
 * MySQL Java tutorial: [http://zetcode.com/db/mysqljava/](http://zetcode.com/db/mysqljava/)
 
+## Excel Programming with Java
+* Java Excel API: [http://jexcelapi.sourceforge.net/](http://jexcelapi.sourceforge.net/ "Java Excel API - A Java API to read, write, and modify Excel spreadsheets")
+* JAVA操作Excel文件:[http://www.cnblogs.com/wuxinrui/archive/2011/03/20/1989326.html](http://www.cnblogs.com/wuxinrui/archive/2011/03/20/1989326.html)
+
 ## Java Regular Expressions
 * [http://www.runoob.com/java/java-regular-expressions.html](http://www.runoob.com/java/java-regular-expressions.html "Java 正则表达式")
 
