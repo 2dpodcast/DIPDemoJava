@@ -37,6 +37,9 @@ Digital Image Processing Demonstration with OpenCV 2 and Java.
 * JDBC Tutorial: [http://www.tutorialspoint.com/jdbc/index.htm](http://www.tutorialspoint.com/jdbc/index.htm)
 * MySQL Java tutorial: [http://zetcode.com/db/mysqljava/](http://zetcode.com/db/mysqljava/)
 
+## Java Regular Expressions
+* [http://www.runoob.com/java/java-regular-expressions.html](http://www.runoob.com/java/java-regular-expressions.html "Java 正则表达式")
+
 ## Events Processing
 * Key Bindings: [http://docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html](http://docs.oracle.com/javase/tutorial/uiswing/misc/keybinding.html "How to Use Key Bindings")
 
